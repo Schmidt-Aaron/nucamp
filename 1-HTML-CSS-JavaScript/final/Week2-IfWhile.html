@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<title>Example of do .. while()</title>
+	<script>
+		let response, finished;
+		finished=false;
+
+		while (!finished) {
+			alert("I'd like to code in JavaScript all night!");
+			response = prompt("Do you agree? ('y' or 'n')");
+			if (response === 'y') {
+				alert("That's awesome!!!")
+			} 
+			else if (response !== 'y') {
+				alert("Well... There is still hope :)")
+				finished = true;
+			}
+		}
+	</script>
+</head>
+</html>
