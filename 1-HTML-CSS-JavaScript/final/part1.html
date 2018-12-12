@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nucamp week 1.1 form</title>
+  
+</head>
+<body>
+  <h1>Please Enter Your Details For Our Dating Website!</h1>
+  <form action="https://learn.nucamp.co/show_everything.php" method="POST" enctype="multipart/form-data" >
+    <fieldset>
+      <legend>Your Face</legend>
+
+      <label for="avatar">Your image</label>
+      <input type="file" id="avatar" name="avatar" accept="image/*" required>
+      <br>
+
+      <label for="preview">Image Preview:</label>
+      <img id="preview">
+    </fieldset>
+
+    <fieldset>
+      <legend>Your General Details</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" for="name" placeholder="Your full name" required>
+      <br>
+
+      <span>Gender: </span>
+      <label for="male">Male</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="female">Female</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <br>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="0" max="100" required>
+      <br>
+
+      <label for="dob">Date of birth:</label>
+      <input type="date" id="dob" name="dob">
+      <br>
+
+      <label for="color">Favorite Color:</label>
+      <input type="color" id="color" name="color"> 
+      <br>
+
+      <label for="favCountry">Favorite Country:</label>
+      <select id="favCountry" name="favorite country">
+        <option value="">Please select your favorite country</option>
+        <option value="costa rica">Costa Rica</option>
+        <option value="iceland">Iceland</option>
+        <option value="portugal">Portugal</option>
+        <option value="canada">Canada</option>
+        <option value="australia">Australia</option>
+        <option value="none">Can't Decide</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Indicator</legend>
+
+      <label for="height">Height:</label>
+      <span>Short</span>
+      <input type="range" id="height" name="height" min="0" max="100" value="50">
+      <span>Tall</span>
+      <br>
+
+      <label for="salary">Salary:</label>
+      <span>Poor</span>
+      <input type="range" id="salary" name="salary" min="0" max="100" value="50">
+      <span>Rich</span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Contact Information</legend>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      
+      <label for="tel">Mobile:</label>
+      <input type="tel" id="tel" name="tel">
+      <br>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address"></textarea>
+      <br>
+
+      <span>Method to contact you:</span>
+      <input type="checkbox" id="contact-phone" name="bestcontact[]" value="phone">
+      <label for="contact-phone">Phone</label>
+      <input type="checkbox" id="contact-email" name="bestcontact[]" value="email">
+      <label for="contact-email">Email</label>
+      <input type="checkbox" id="contact-skype" name="bestcontact[]" value="skype">
+      <label for="contact-skype">Skype</label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
