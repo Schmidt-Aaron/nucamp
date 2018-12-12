@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>A Simple Web Page</title>
+   <meta name="author" content="Aaron Schmidt">
+   <style>
+   body {
+      height: 100vh;
+      width: 100vw;
+      display:grid;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background: linear-gradient(45deg, #2ce02c 0%,#2989d8 48%,#207cca 71%,#84a5f4 100%);
+      color: #222;
+      }
+
+   body > div {
+      background-color: rgba(255,255,255, 0.25);
+      border-radius: 25px;
+      transition: all 0.5s linear;
+      padding: 1rem;
+   }
+   body > div:hover {
+      transform: scale(1.1);
+   }
+   body > div > div{
+      text-align: center;
+   }
+
+   </style>
+</head>
+<body>
+   <div>
+      <div>
+         <h1>My Web Page H1 Title</h1>
+         <h2>My Web Page H2 Sub-Title</h2>
+         <h3>This web page is so awesome!</h3>
+      </div>
+      <section>
+        <ul>
+           <li>This year I got a job as a web developer...</li>
+           <li>This year I learned to code...</li>
+           <li>This year I made the decision to change careers...</li>
+        </ul>
+      </section>
+
+   </div>
+   <!-- You can't read this! -->
+</body>
+</html>
