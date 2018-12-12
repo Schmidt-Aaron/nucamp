@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<script>
+	var animals, text, fLen, i;
+
+	animals = ["Zebra", "Horse", "Gazelle", "Dolphin"];
+	fLen = animals.length;
+	text = "<ol>";
+	for (i = 0; i < fLen; i++) {
+		text += "<li>" + animals[i] + "</li>";
+	}
+    text += "</ol>";
+	document.write("This is the resulting Array using am HTML List: " + text);
+</script>
+
+</body>
+</html>
