@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // declare global variables
+      let target,
+        guess = "",
+        numberGuesses = 0,
+        finished = false,
+        colorArray = [
+          "blue",
+          "cyan",
+          "gold",
+          "gray",
+          "green",
+          "magenta",
+          "orange",
+          "red",
+          "white",
+          "yellow"
+        ],
+        colorsString = colorArray.join(", ");
+
+      function do_game() {
+        // prompt text
+        const promptText = `I am thinking of one of these colors: \n\n${colorsString} \n\nWhat color am I thinking of? \n(type "stop", or hit Esc to exit.)`;
+
+        // generate random color based on length of the color array
+        const index = Math.floor(Math.random() * colorArray.length);
+
+        // picks a random color from the color array
+        target = colorArray[index];
+        console.log(`the color is ${target}`);
+
+        // main logic
+        while (!finished) {
+          // increment guesses every attempt
+          numberGuesses += 1;
+
+          // capture user input3
+          let guess = prompt(promptText);
+          console.log(guess, typeof guess);
+
+          // stops loop if user hits cancel
+          if (guess === null) {
+            finished = true;
+            alert("better luck next time!");
+            return;
+          }
+
+          finished = check_guess(guess);
+        }
+
+        function check_guess(guess) {
+          if (guess === "stop") return true;
+          // handle colors not listed
+          else if (colorArray.indexOf(guess) === -1) {
+            alert("That is not a recognized color, please try again");
+            return false;
+          }
+          //  else if (guess < target) {
+          //   alert("Your color is alphabetically higher!");
+          //   return false;
+          // } else if (guess > target) {
+          //   alert("Your color is alphabetically lower!");
+          //   return false;
+          // }
+          else if (guess === target) {
+            const body = document.querySelector("body");
+            body.style.backgroundColor = target;
+            alert(
+              `Congratulations! \nIt took you ${numberGuesses} to finish the game! \nYou can see the color in the background.`
+            );
+            return true;
+          }
+        }
+      }
+
+      // runs the game
+      do_game();
+    </script>
+  </body>
+</html>
