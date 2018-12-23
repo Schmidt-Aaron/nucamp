@@ -2,14 +2,20 @@
 <html>
   <head>
     <script>
+      const sound = new Audio("../../assets/balogna.mp3");
+
       function bigImg(x) {
+        x.src = "../../assets/singing.jpg";
         x.style.height = "64px";
         x.style.width = "64px";
+        sound.play();
       }
 
       function normalImg(x) {
+        x.src = "../../assets/smiley.gif";
         x.style.height = "32px";
         x.style.width = "32px";
+        sound.pause();
       }
     </script>
   </head>
