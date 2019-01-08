@@ -9,7 +9,7 @@
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -22,7 +22,9 @@
       rel="stylesheet"
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- endbuild -->
+
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -155,137 +157,170 @@
               data-toggle="modal"
               data-target="#reservation-modal"
               class="btn btn-warning btn-block nav-link pt-3 pb-3"
-              >Reserve Table</button
             >
+              Reserve Table
+            </button>
           </div>
         </div>
       </div>
-
-      
     </header>
     <!-- Reservation Modal -->
-    <div class="modal fade" id="reservation-modal" tabindex="-1" role="dialog" aria-labelledby="reservationModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Reserve a Table</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-              <form action="#" class="col-12">
-                <div class="form-group">
-                  <div class="form-row">
-                    <div class="col-12 col-md-3"><p>Number of Guests</p></div>
-                    <div class="form-check-inline col">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="onePerson"
-                        value="one"
-                      />
-                      <label class="form-check-label pr-2" for="size">1 </label>
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="twoPerson"
-                        value="two"
-                      />
-                      <label class="form-check-label pr-2" for="size">2 </label>
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="threePerson"
-                        value="three"
-                      />
-                      <label class="form-check-label pr-2" for="size">3 </label>
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="fourPerson"
-                        value="four"
-                      />
-                      <label class="form-check-label pr-2" for="size">4 </label>
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="fiveePerson"
-                        value="five"
-                      />
-                      <label class="form-check-label pr-2" for="size">5 </label>
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="sixPerson"
-                        value="six"
-                      />
-                      <label class="form-check-label pr-2" for="size">6</label>
-                    </div>
+    <div
+      class="modal fade"
+      id="reservation-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="reservationModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reserve a Table</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" class="col-12">
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-12 col-md-3"><p>Number of Guests</p></div>
+                  <div class="form-check-inline col">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="onePerson"
+                      value="one"
+                    />
+                    <label class="form-check-label pr-2" for="size">1 </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="twoPerson"
+                      value="two"
+                    />
+                    <label class="form-check-label pr-2" for="size">2 </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="threePerson"
+                      value="three"
+                    />
+                    <label class="form-check-label pr-2" for="size">3 </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="fourPerson"
+                      value="four"
+                    />
+                    <label class="form-check-label pr-2" for="size">4 </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="fiveePerson"
+                      value="five"
+                    />
+                    <label class="form-check-label pr-2" for="size">5 </label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="size"
+                      id="sixPerson"
+                      value="six"
+                    />
+                    <label class="form-check-label pr-2" for="size">6</label>
                   </div>
                 </div>
-                <div class="form-group form-row">
-                  <div class="col-12 col-md-3">
-                    <label for="section">Section</label>
-                  </div>
-                  <div class="btn-group btn-group-toggle col" data-toggle="buttons">
-                      <label class="btn btn-secondary active btn-success">
-                        <input type="radio" name="section" id="nonsmoking" autocomplete="off" checked> Non-smoking
-                      </label>
-                      <label class="btn btn-secondary btn-danger">
-                        <input type="radio" name="section" id="smoking" autocomplete="off"> Smoking
-                      </label>
-                    </div>
+              </div>
+              <div class="form-group form-row">
+                <div class="col-12 col-md-3">
+                  <label for="section">Section</label>
                 </div>
-                <div class="form-group form-row">
-                  <div class="col-12 col-lg-3">
-                    <label for="date">Date and Time</label>
-                  </div>
-                  <div class="col">
-                    <div class="input-group mb-2">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text fa fa-calendar"></span>
-                      </div>
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="date"
-                        value="2019-01-04"
-                        min="2019-01-04"
-                      />
+                <div
+                  class="btn-group btn-group-toggle col"
+                  data-toggle="buttons"
+                >
+                  <label class="btn btn-secondary active btn-success">
+                    <input
+                      type="radio"
+                      name="section"
+                      id="nonsmoking"
+                      autocomplete="off"
+                      checked
+                    />
+                    Non-smoking
+                  </label>
+                  <label class="btn btn-secondary btn-danger">
+                    <input
+                      type="radio"
+                      name="section"
+                      id="smoking"
+                      autocomplete="off"
+                    />
+                    Smoking
+                  </label>
+                </div>
+              </div>
+              <div class="form-group form-row">
+                <div class="col-12 col-lg-3">
+                  <label for="date">Date and Time</label>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text fa fa-calendar"></span>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="input-group mb-2">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text fa fa-clock-o"></span>
-                      </div>
-                      <input
-                        type="time"
-                        class="form-control"
-                        id="time"
-                        value="15:00"
-                        min="15:00"
-                        max="22:00"
-                      />
-                    </div>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      value="2019-01-04"
+                      min="2019-01-04"
+                    />
                   </div>
                 </div>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">Cancel</span>
-                  </button>
-                <button type="submit" class="btn btn-primary">Reserve</button>
-              </form>
-            </div>
+                <div class="col">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text fa fa-clock-o"></span>
+                    </div>
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="time"
+                      value="15:00"
+                      min="15:00"
+                      max="22:00"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">Cancel</span>
+              </button>
+              <button type="submit" class="btn btn-primary">Reserve</button>
+            </form>
           </div>
         </div>
-      </div> <!-- End Modal -->
+      </div>
+    </div>
+    <!-- End Modal -->
 
     <div class="container">
       <div class="row row-content">
@@ -349,20 +384,34 @@
               </div>
             </div>
             <ol class="carousel-indicators">
-                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#mycarousel" data-slide-to="1"></li>
-                <li data-target="#mycarousel" data-slide-to="2"></li>
+              <li
+                data-target="#mycarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#mycarousel" data-slide-to="1"></li>
+              <li data-target="#mycarousel" data-slide-to="2"></li>
             </ol>
-            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <a
+              class="carousel-control-prev"
+              href="#mycarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
             </a>
-            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <a
+              class="carousel-control-next"
+              href="#mycarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
             </a>
             <div class="btn-group" id="carouselButton">
-                <button class="btn btn-danger btn-sm" id="carousel-button">
-                    <span id="carousel-button-icon" class="fa fa-pause"></span>
-                 </button>
+              <button class="btn btn-danger btn-sm" id="carousel-button">
+                <span id="carousel-button-icon" class="fa fa-pause"></span>
+              </button>
             </div>
           </div>
         </div>
@@ -438,7 +487,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <footer class="footer">
@@ -505,29 +553,44 @@
         </div>
       </div>
     </footer>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <!-- endbuild -->
     <script>
       // enables tooltips and carousel buttons
       $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
-        $("#mycarousel").carousel( { interval: 2000 } );
-        $("#carousel-button").click(function(){
-    if ($("#carousel-button").children("span").hasClass('fa-pause')) 
-        {
-        $("#mycarousel").carousel('pause');
-        $("#carousel-button").children("span").removeClass('fa-pause');
-        $("#carousel-button").children("span").addClass('fa-play');
-    }
-    else if ($("#carousel-button").children("span").hasClass('fa-play')){
-        $("#mycarousel").carousel('cycle');
-        $("#carousel-button").children("span").removeClass('fa-play');
-        $("#carousel-button").children("span").addClass('fa-pause'); 
-    }
-});
+        $("#mycarousel").carousel({ interval: 2000 });
+        $("#carousel-button").click(function() {
+          if (
+            $("#carousel-button")
+              .children("span")
+              .hasClass("fa-pause")
+          ) {
+            $("#mycarousel").carousel("pause");
+            $("#carousel-button")
+              .children("span")
+              .removeClass("fa-pause");
+            $("#carousel-button")
+              .children("span")
+              .addClass("fa-play");
+          } else if (
+            $("#carousel-button")
+              .children("span")
+              .hasClass("fa-play")
+          ) {
+            $("#mycarousel").carousel("cycle");
+            $("#carousel-button")
+              .children("span")
+              .removeClass("fa-play");
+            $("#carousel-button")
+              .children("span")
+              .addClass("fa-pause");
+          }
+        });
       });
       // prefill date with today's date
       const dateField = document.querySelector("#date");
