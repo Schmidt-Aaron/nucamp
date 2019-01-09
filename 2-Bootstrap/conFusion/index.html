@@ -67,9 +67,9 @@
           </ul>
         </div>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
-            <span class="fa fa-sign-in"></span> Login</a
-          >
+      
+          <a id="loginButton"><span class="fa fa-sign-in"></span> Login</a>
+          
         </span>
       </div>
     </nav>
@@ -79,7 +79,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Login</h4>
-            <button type="button" class="close" data-dismiss="modal">
+            <button type="button" class="close closeLogin">
               &times;
             </button>
           </div>
@@ -122,7 +122,7 @@
                   data-dismiss="modal"
                 >
                   Cancel
-                </button>
+                </a>
                 <button type="submit" class="btn btn-primary btn-sm ml-1">
                   Sign in
                 </button>
@@ -154,8 +154,7 @@
             <button
               href="#reservation"
               type="button"
-              data-toggle="modal"
-              data-target="#reservation-modal"
+              id="reservationButton"
               class="btn btn-warning btn-block nav-link pt-3 pb-3"
             >
               Reserve Table
@@ -179,8 +178,7 @@
             <h4 class="modal-title">Reserve a Table</h4>
             <button
               type="button"
-              class="close"
-              data-dismiss="modal"
+              class="close closeReservation"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
@@ -399,7 +397,7 @@
               data-slide="prev"
             >
               <span class="carousel-control-prev-icon"></span>
-            </a>
+            </>
             <a
               class="carousel-control-next"
               href="#mycarousel"
@@ -560,38 +558,7 @@
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
     <script>
-      // enables tooltips and carousel buttons
-      $(document).ready(function() {
-        $('[data-toggle="tooltip"]').tooltip();
-        $("#mycarousel").carousel({ interval: 2000 });
-        $("#carousel-button").click(function() {
-          if (
-            $("#carousel-button")
-              .children("span")
-              .hasClass("fa-pause")
-          ) {
-            $("#mycarousel").carousel("pause");
-            $("#carousel-button")
-              .children("span")
-              .removeClass("fa-pause");
-            $("#carousel-button")
-              .children("span")
-              .addClass("fa-play");
-          } else if (
-            $("#carousel-button")
-              .children("span")
-              .hasClass("fa-play")
-          ) {
-            $("#mycarousel").carousel("cycle");
-            $("#carousel-button")
-              .children("span")
-              .removeClass("fa-play");
-            $("#carousel-button")
-              .children("span")
-              .addClass("fa-pause");
-          }
-        });
-      });
+      
       // prefill date with today's date
       const dateField = document.querySelector("#date");
       dateField.valueAsDate = new Date();
